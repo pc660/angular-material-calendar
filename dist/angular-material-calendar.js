@@ -243,6 +243,10 @@ angular.module("materialCalendar").directive("calendarMd", ["$compile", "$parse"
             $scope.disableFutureSelection = $scope.disableFutureSelection || false;
             $scope.disableSelection = $scope.disableSelection || false;
 
+            $scope.$on("updateMaterialCalendar", function()) {
+              setDate();  
+            };
+            
             $scope.sameMonth = function (date) {
                 var d = angular.copy(date);
                 return d.getFullYear() === $scope.calendar.year &&
