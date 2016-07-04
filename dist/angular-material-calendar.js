@@ -244,7 +244,7 @@ angular.module("materialCalendar").directive("calendarMd", ["$compile", "$parse"
             $scope.disableSelection = $scope.disableSelection || false;
 
             $scope.$on("updateMaterialCalendar", function() {
-              setDate();
+              setData();
             });
             
             $scope.sameMonth = function (date) {
