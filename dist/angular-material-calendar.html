@@ -1,15 +1,13 @@
 <md-content layout='column' layout-fill md-swipe-left='next()'
 md-swipe-right='prev()'><md-toolbar><div class='md-toolbar-tools'
-  layout='row'><md-button class='md-icon-button' ng-click='prev()'
+  layout='row'><md-button class='md-icon-button back-button' ng-click='prev()'
   aria-label='Previous month'><md-tooltip ng-if='::tooltips()'>Previous
-  month</md-tooltip><md-icon
-  md-svg-icon='md-tabs-arrow'></md-icon></md-button><div flex></div><h2
+  month</md-tooltip>上个月</md-button><div flex></div><h2
     class='calendar-md-title'><span>{{ calendar.start |
       date:titleFormat:timezone }}</span></h2><div flex></div><md-button
-  class='md-icon-button' ng-click='next()' aria-label='Next month'><md-tooltip
-  ng-if='::tooltips()'>Next month</md-tooltip><md-icon
-  md-svg-icon='md-tabs-arrow'
-  class='moveNext'></md-icon></md-button></div></md-toolbar><!-- agenda view
+  class='md-icon-button next-button' ng-click='next()' aria-label='Next month'><md-tooltip
+  ng-if='::tooltips()'>Next month</md-tooltip>下个月
+  </md-button></div></md-toolbar><!-- agenda view
 --><md-content ng-if='weekLayout === columnWeekLayout' class='agenda'><div
   ng-repeat='week in calendar.weeks track by $index'><div ng-if='sameMonth(day)'
     ng-class='{&quot;disabled&quot; : isDisabled(day), active: active === day }'
